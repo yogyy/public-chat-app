@@ -1,0 +1,31 @@
+/**
+ * For more details on how to configure Wrangler, refer to:
+ * https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "public-chat",
+  "compatibility_date": "2025-09-02",
+  "compatibility_flags": ["nodejs_compat"],
+  "main": "@tanstack/react-start/server-entry",
+  "observability": {
+    "enabled": true
+  },
+  "vars": {
+    "BETTER_AUTH_SECRET": "",
+    "BETTER_AUTH_URL": "",
+    "AUTH_GITHUB_ID": "",
+    "AUTH_GITHUB_SECRET": "",
+    "AUTH_GOOGLE_ID": "",
+    "AUTH_GOOGLE_SECRET": ""
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "better_auth",
+      "database_id": "1e68e227-51aa-4861-b9d4-96a1424b3cbe",
+      "migrations_dir": "drizzle",
+      "migrations_table": "__drizzle_migrations"
+    }
+  ]
+}
