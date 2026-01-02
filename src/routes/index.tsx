@@ -1,3 +1,4 @@
+import { SimpleIconsGoolge } from "@/components/icons/simple-icon";
 import { Messages } from "@/components/Messages";
 import { AddChatForm } from "@/components/NewChatForm";
 import { Button } from "@/components/ui/button";
