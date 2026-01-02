@@ -1,6 +1,7 @@
 import { Messages } from "@/components/Messages";
 import { AddChatForm } from "@/components/NewChatForm";
 import { Button } from "@/components/ui/button";
+import { useSession } from "@/lib/auth-client";
 import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/")({
@@ -11,6 +12,8 @@ export const Route = createFileRoute("/")({
 });
 
 function App() {
+  const { data: session } = useSession();
+
   return (
     <main className="bg-zinc-800 bg-[url(/pattern.png)] bg-contain bg-fixed bg-repeat">
       <div className="backdrop-brightness-50 w-full h-full absolute"></div>
