@@ -2,7 +2,7 @@ import { SimpleIconsGoolge } from "@/components/icons/simple-icon";
 import { Messages } from "@/components/Messages";
 import { AddChatForm } from "@/components/NewChatForm";
 import { Button } from "@/components/ui/button";
-import { useSession } from "@/lib/auth-client";
+import { signIn, useSession } from "@/lib/auth-client";
 import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/")({
